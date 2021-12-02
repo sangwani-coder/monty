@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
 	if (fd == NULL)
 	{
-		printf("Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 

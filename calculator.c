@@ -20,7 +20,7 @@ void add(cmd_t *cmd)
 
 	if (cmd == NULL || h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't add, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -49,7 +49,7 @@ void sub(cmd_t *cmd)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't sub, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -78,7 +78,7 @@ void divide(cmd_t *cmd)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't div, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't div, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -87,7 +87,7 @@ void divide(cmd_t *cmd)
 
 	if (node_1->n == 0)
 	{
-		printf("L%d: division by zero\n", cmd->line_number);
+		fprintf(stderr, "L%d: division by zero\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -112,7 +112,7 @@ void mul(cmd_t *cmd)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't mul, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -141,7 +141,7 @@ void mod(cmd_t *cmd)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't mod, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -150,7 +150,7 @@ void mod(cmd_t *cmd)
 
 	if (node_1->n == 0)
 	{
-		printf("L%d: division by zero\n", cmd->line_number);
+		fprintf(stderr, "L%d: division by zero\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 

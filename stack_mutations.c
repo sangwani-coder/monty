@@ -20,7 +20,7 @@ void push(cmd_t *cmd)
 
 	if (h == NULL)
 	{
-		printf("L%d: usage: push integer\n", cmd->line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));
@@ -72,7 +72,7 @@ void pop(cmd_t *cmd)
 
 	if (*h == NULL || h == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -96,7 +96,7 @@ void swap(cmd_t *cmd)
 
 	if (*h == NULL || h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't swap, stack too short\n", cmd->line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", cmd->line_number);
 		exit(EXIT_FAILURE);
 	}
 	first = *h;
